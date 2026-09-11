@@ -16,6 +16,9 @@
     <!-- AERA recovery, preserving the complete upstream ancestry. -->
     <project path="bootable/recovery" name="android_bootable_recovery" remote="AERA" revision="aera-16.0"/>
 
+    <!-- AERA's LVGL UI engine, Android build module, and GPU extensions. -->
+    <project path="external/lvgl" name="android_external_lvgl" remote="AERA" revision="aera-16.0"/>
+
     <!-- AERA vendor build system -->
     <project path="vendor/recovery" name="android_vendor_recovery" remote="AERA" revision="aera-16.0"/>
 
