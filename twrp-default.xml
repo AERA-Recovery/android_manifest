@@ -111,7 +111,7 @@
     <project path="device/qcom/twrp-common" name="android_device_qcom_twrp-common" remote="AERA" revision="aera-16.0"/>
 
     <!-- AERA-specific projects, removals, and the Dodge device tree. -->
-    <include name="fox.xml"/>
+    <include name="aera.xml"/>
 
     <!-- LAST: Remove unused projects for minimal manifest -->
     <include name="remove-minimal.xml"/>

@@ -37,7 +37,7 @@ The recovery image is written under `out/target/product/dodge/`.
 
 - `default.xml` pins the Android platform source set.
 - `twrp-default.xml` overlays the recovery build system and dependencies.
-- `fox.xml` contains the AERA recovery stack and Dodge device tree.
+- `aera.xml` contains the AERA recovery stack and Dodge device tree.
 - `remove-minimal.xml` removes projects that are unnecessary for recovery.
 
 ## Contribution policy
