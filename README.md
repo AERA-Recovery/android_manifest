@@ -2,7 +2,7 @@
 
 This is the Android 16 source manifest for AERA Recovery Project. It combines
 the normal Android, LineageOS, and TeamWin sources with the private AERA forks
-required to reproduce the current Dodge recovery build.
+required to build AERA recovery for supported devices.
 
 All AERA-owned projects are hosted in the private
 [`AERA-Recovery`](https://github.com/AERA-Recovery) GitHub organization. Access
@@ -22,10 +22,16 @@ The manifest intentionally keeps unchanged platform dependencies on their
 normal upstream remotes. AERA repositories are used for every recovery fork and
 for every source tree carrying an AERA-specific change.
 
+Device trees are not included in the common manifest. Clone only the tree for
+the device you intend to build.
+
 ## Build for OnePlus 13 (`dodge`)
 
 ```bash
 cd ~/android/AERA_16.0
+git clone -b aera-16.0 \
+  git@github.com:AERA-Recovery/android_device_oneplus_dodge-AERA.git \
+  device/oneplus/dodge
 source build/envsetup.sh
 lunch twrp_dodge-bp2a-eng
 mka adbd recoveryimage
@@ -33,11 +39,26 @@ mka adbd recoveryimage
 
 The recovery image is written under `out/target/product/dodge/`.
 
+## Build for OnePlus 15 (`infiniti`)
+
+```bash
+cd ~/android/AERA_16.0
+git clone -b aera-16.0 \
+  git@github.com:AERA-Recovery/android_device_oneplus_infiniti-AERA.git \
+  device/oneplus/infiniti
+source build/envsetup.sh
+lunch twrp_infiniti-bp2a-eng
+mka adbd recoveryimage
+```
+
+The recovery image is written under `out/target/product/infiniti/`.
+
 ## Manifest layout
 
 - `default.xml` pins the Android platform source set.
 - `twrp-default.xml` overlays the recovery build system and dependencies.
-- `aera.xml` contains the AERA recovery stack and Dodge device tree.
+- `aera.xml` contains the shared AERA recovery stack. Device trees are added
+  separately for each build.
 - `remove-minimal.xml` removes projects that are unnecessary for recovery.
 
 ## Contribution policy
