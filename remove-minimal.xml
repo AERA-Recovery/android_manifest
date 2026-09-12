@@ -202,7 +202,6 @@
     <remove-project path="external/libexif" />
     <remove-project path="external/libgsm" />
     <remove-project path="external/libhevc" />
-    <remove-project path="external/libjpeg-turbo" />
     <remove-project path="external/libkmsxx" />
     <remove-project path="external/libldac" />
     <remove-project path="external/libmpeg2" />
