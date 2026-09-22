@@ -48,10 +48,6 @@
     <project path="external/libjpeg-turbo" name="platform/external/libjpeg-turbo"
              remote="aosp" revision="refs/tags/android-16.0.0_r1" groups="pdk"/>
 
-    <!-- WLAN support: use AOSP's default wpa_supplicant_8 and AERA's dnsmasq snapshot. -->
-    <remove-project name="platform/external/dnsmasq"/>
-    <project path="external/dnsmasq" name="android_external_dnsmasq" remote="AERA" revision="aera-16.0"/>
-
     <!--
       Device trees are intentionally not synced by the common AERA manifest.
       Add the device repository you want to build as a local manifest instead.

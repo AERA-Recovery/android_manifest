@@ -33,7 +33,6 @@
     <remove-project name="platform/system/sepolicy" />
     <remove-project name="platform/system/update_engine" />
     <remove-project name="platform/system/vold" />
-    <remove-project name="platform/external/rust/android-crates-io" />
     <remove-project name="platform/external/xz-embedded" />
 
     <!-- AERA recovery build system and patched platform sources. -->
@@ -72,15 +71,8 @@
     <!-- Include fake OMAPI for the recovery -->
     <project name="android_external_se_omapi" path="external/se_omapi" remote="AERA" revision="aera-16.0" />
 
-    <!-- foxcli: the modern Rust `fox` CLI front-end (module "foxcli", stem "fox"),
-         required by bootable/recovery (TWRP_REQUIRED_MODULES += foxcli). Replaces
-         the legacy `twrp`-symlink CLI. -->
-    <project name="android_external_foxcli" path="external/foxcli" remote="AERA" revision="aera-16.0" />
-
-    <!-- AERA snapshot of android-crates-io: adds recovery_available to the CLI
-         Rust dependencies (clap/serde_json chains + libc) so the recovery
-         variant of `fox` links. Replaces the AOSP copy removed above. -->
-    <project name="android_external_rust_android-crates-io" path="external/rust/android-crates-io" remote="AERA" revision="aera-16.0" />
+    <!-- Native AERA Recovery command-line client. -->
+    <project name="android_external_aeracli" path="external/aeracli" remote="AERA" revision="aera-16.0" />
 
     <!-- Include phh's treble repo for lptools support -->
     <project name="phhusson/vendor_lptools" path="external/lptools" remote="github" revision="master" />
