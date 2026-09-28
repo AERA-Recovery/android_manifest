@@ -10,6 +10,7 @@
     <!-- Replace AOSP projects with their AERA counterparts -->
     <remove-project name="platform/bootable/recovery" />
     <remove-project name="platform/system/core" />
+    <remove-project name="platform/packages/modules/adb" />
     <remove-project name="platform/packages/modules/Connectivity" />
     <remove-project name="platform/external/libfuse" />
 
@@ -24,6 +25,7 @@
 
     <!-- AERA-patched sources -->
     <project path="system/core" name="android_system_core" remote="AERA" revision="aera-16.0"/>
+    <project path="packages/modules/adb" name="android_packages_modules_adb" remote="AERA" revision="aera-16.0"/>
 
     <!-- Recovery connectivity support -->
     <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="AERA" revision="aera-16.0"/>
