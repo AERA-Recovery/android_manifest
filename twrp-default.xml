@@ -8,9 +8,10 @@
             fetch="https://github.com/LineageOS"
             review="https://review.lineageos.org"/>
 
-    <!-- Private AERA sources. GitHub organization access and an SSH key are required. -->
+    <!-- Public downloads use HTTPS; authorized contributors push over SSH. -->
     <remote name="AERA"
-            fetch="ssh://git@github.com/AERA-Recovery"/>
+            fetch="https://github.com/AERA-Recovery"
+            pushurl="ssh://git@github.com/AERA-Recovery"/>
 
     <remote name="github"
             fetch="https://github.com"/>

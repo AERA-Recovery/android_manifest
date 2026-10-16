@@ -1,20 +1,21 @@
 # AERA Recovery Project manifest
 
 This is the Android 16 source manifest for AERA Recovery Project. It combines
-the normal Android, LineageOS, and TeamWin sources with the private AERA forks
+the normal Android, LineageOS, and TeamWin sources with the public AERA forks
 required to build AERA recovery for supported devices.
 
-All AERA-owned projects are hosted in the private
-[`AERA-Recovery`](https://github.com/AERA-Recovery) GitHub organization. Access
-to that organization and an SSH key registered with GitHub are required before
-syncing.
+All AERA-owned projects are hosted in the
+[`AERA-Recovery`](https://github.com/AERA-Recovery) GitHub organization.
+Downloading and syncing use HTTPS; no GitHub account or SSH key is required.
+The manifest keeps a separate SSH push URL for contributors. Pushing still
+requires an authorized SSH key and write access to the target repository.
 
 ## Sync
 
 ```bash
 mkdir -p ~/android/AERA_16.0
 cd ~/android/AERA_16.0
-repo init -u git@github.com:AERA-Recovery/android_manifest.git -b aera-16.0
+repo init -u https://github.com/AERA-Recovery/android_manifest.git -b aera-16.0
 repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc)
 ```
 
@@ -30,7 +31,7 @@ the device you intend to build.
 ```bash
 cd ~/android/AERA_16.0
 git clone -b aera-16.0 \
-  git@github.com:AERA-Recovery/android_device_oneplus_dodge-AERA.git \
+  https://github.com/AERA-Recovery/android_device_oneplus_dodge-AERA.git \
   device/oneplus/dodge
 source build/envsetup.sh
 lunch twrp_dodge-bp2a-eng
@@ -44,7 +45,7 @@ The recovery image is written under `out/target/product/dodge/`.
 ```bash
 cd ~/android/AERA_16.0
 git clone -b aera-16.0 \
-  git@github.com:AERA-Recovery/android_device_oneplus_infiniti-AERA.git \
+  https://github.com/AERA-Recovery/android_device_oneplus_infiniti-AERA.git \
   device/oneplus/infiniti
 source build/envsetup.sh
 lunch twrp_infiniti-bp2a-eng
