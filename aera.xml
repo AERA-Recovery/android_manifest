@@ -36,6 +36,10 @@
     <project path="external/ttyd" name="android_external_ttyd" remote="AERA" revision="aera-16.0"/>
     <project path="external/libwebsockets" name="android_external_libwebsockets" remote="AERA" revision="aera-16.0"/>
 
+    <!-- Native SMB/SFTP network storage libraries, with upstream history. -->
+    <project path="external/libsmb2" name="android_external_libsmb2" remote="AERA" revision="aera-16.0"/>
+    <project path="external/libssh2" name="android_external_libssh2" remote="AERA" revision="aera-16.0"/>
+
     <!-- rclone for cloud backup -->
     <project path="external/rclone" name="android_external_rclone" remote="AERA" revision="aera-16.0"/>
 
