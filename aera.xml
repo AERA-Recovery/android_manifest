@@ -30,6 +30,11 @@
     <!-- Recovery connectivity support -->
     <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="AERA" revision="aera-16.0"/>
 
+    <!-- Optional Qualcomm modem transport/services, preserving upstream history. -->
+    <project path="external/aera_qrtr" name="android_external_aera_qrtr" remote="AERA" revision="aera-16.0"/>
+    <project path="external/aera_rmtfs" name="android_external_aera_rmtfs" remote="AERA" revision="aera-16.0"/>
+    <project path="external/aera_tqftpserv" name="android_external_aera_tqftpserv" remote="AERA" revision="aera-16.0"/>
+
     <!-- Terminal (ttyd) + dependencies -->
     <project path="external/libuv" name="android_external_libuv" remote="AERA" revision="aera-16.0"/>
     <project path="external/json-c" name="android_external_json-c" remote="AERA" revision="aera-16.0"/>
